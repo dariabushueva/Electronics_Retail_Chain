@@ -22,7 +22,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls', namespace='users')),
-  #  path('', include('edu_modules.urls', namespace='edu_modules')),
+    path('', include('chain.urls', namespace='chain')),
 ]
 
 if settings.DEBUG:
