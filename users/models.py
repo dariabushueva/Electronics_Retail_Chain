@@ -8,9 +8,8 @@ NULLABLE = {'blank': True, 'null': True}
 
 
 class User(AbstractUser):
-    """
-    Модель пользователя сервисом.
-    """
+    """ Модель пользователя сервисом """
+
     username = None
 
     email = models.EmailField(_("email"), unique=True)

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'mptt',
+    'drf_yasg',
 
     'users',
     'chain',
@@ -87,7 +88,7 @@ DATABASES = {
         'NAME': config('POSTGRES_DB'),
         'USER': config('POSTGRES_USER'),
         'PASSWORD': config('POSTGRES_PASSWORD'),
-      #  'HOST': config('POSTGRES_HOST'),
+        'HOST': config('POSTGRES_HOST'),
     }
 }
 

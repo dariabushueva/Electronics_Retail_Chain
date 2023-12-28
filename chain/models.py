@@ -1,8 +1,6 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 
-from users.models import NULLABLE
-
 
 class Supplier(MPTTModel):
     """ Модель поставщика """
@@ -43,6 +41,7 @@ class Supplier(MPTTModel):
 
 
 class Product(models.Model):
+    """ Модель продукта """
 
     name = models.CharField(max_length=150, verbose_name='Название')
     model = models.CharField(max_length=150, verbose_name='Модель')

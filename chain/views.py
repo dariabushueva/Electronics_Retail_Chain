@@ -6,6 +6,8 @@ from chain.serializers import SupplierSerializer, ProductSerializer
 
 
 class SupplierViewSet(viewsets.ModelViewSet):
+    """ VewSet для модели Поставщика """
+
     serializer_class = SupplierSerializer
     queryset = Supplier.objects.all()
     permission_classes = [IsActiveOrStaff]
@@ -26,6 +28,8 @@ class SupplierViewSet(viewsets.ModelViewSet):
 
 
 class ProductViewSet(viewsets.ModelViewSet):
+    """ VewSet для модели Продукта """
+
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
     permission_classes = [IsActiveOrStaff]

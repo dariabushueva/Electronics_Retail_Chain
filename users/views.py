@@ -6,6 +6,8 @@ from users.serializers import UserSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
+    """ ViewSet для модели Сотрудника """
+
     serializer_class = UserSerializer
     queryset = User.objects.all()
     permission_classes = [IsAdminUser]
@@ -14,4 +16,3 @@ class UserViewSet(viewsets.ModelViewSet):
         if self.action == 'create':
             self.permission_classes = [AllowAny]
         return super(UserViewSet, self).get_permissions()
-
